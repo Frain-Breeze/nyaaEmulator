@@ -8,4 +8,5 @@
 
 #define HEX(x) std::hex << (x) << std::dec
 
-#define BIN(x) std::dec << ((int)x) << std::dec
+#define BIN(x) ((int)x) << std::dec
+

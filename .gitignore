@@ -5,3 +5,5 @@ debug
 *.vcxproj
 *.user
 *.sln
+*.bin
+*.bak
