@@ -220,6 +220,33 @@ void emulateCycle() {
 			r[a] = (r[i1] & r[i2]);
 			pc += 2;
 			break;
+		case 0x0002:
+			Debug("i1 OR i2");
+			r[a] = (r[i1] | r[i2]);
+			pc += 2;
+			break;
+		case 0x0003:
+			Debug("i1 NAND i2");
+			r[a] = !(r[i1] & r[i2]);
+			pc += 2;
+			break;
+		case 0x0004:
+			Debug("i1 XOR i2");
+			r[a] = (r[i1] ^ r[i2]);
+			pc += 2;
+			break;
+		case 0x0005:
+			Debug("i1 << 1");
+			r[a] = r[i1];
+			r[a] <<= 1;
+			pc += 2;
+			break;
+		case 0x0006:
+			Debug("i1 >> 1");
+			r[a] = r[i1];
+			r[a] >>= 1;
+			pc += 2;
+			break;
 
 		default:
 			Debug("unrecognized opcode");
